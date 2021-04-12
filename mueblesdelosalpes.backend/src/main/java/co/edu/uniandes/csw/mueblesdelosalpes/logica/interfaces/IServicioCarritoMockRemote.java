@@ -9,7 +9,9 @@
  * Autor: Juan Sebastián Urrego
  * ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
  */
+
 package co.edu.uniandes.csw.mueblesdelosalpes.logica.interfaces;
+
 
 import co.edu.uniandes.csw.mueblesdelosalpes.dto.Mueble;
 import co.edu.uniandes.csw.mueblesdelosalpes.dto.Usuario;
@@ -18,65 +20,50 @@ import javax.ejb.Remote;
 
 /**
  * Contrato funcional de los servicios para el carrito de compras
- *
  * @author Juan Sebastián Urrego
  */
 @Remote
-public interface IServicioCarritoMockRemote {
+public interface IServicioCarritoMockRemote
+{
 
     /**
      * Devuelve el inventario de muebles que se encuentran en el carrito
-     *
      * @return inventario Lista con los muebles que se encuentran en el carrito
      */
     public ArrayList<Mueble> getInventario();
 
     /**
      * Modifica el inventario del carrito
-     *
      * @param inventario Nueva lista de muebles
      */
     public void setInventario(ArrayList<Mueble> inventario);
 
     /**
      * Devuelve el precio total del inventario
-     *
      * @return precioTotalInventario Precio total del inventario
      */
     public double getPrecioTotalInventario();
 
     /**
      * Devuelve el cantidad total de unidades en el carrito
-     *
      * @return totalUnidades Cantidad total de unidades en el carrito
      */
     public int getTotalUnidades();
 
     /**
      * Realiza la compra de los items que se encuentran en el carrito
-     *
      * @param usuario Usuario que realiza la compra
      */
     public void comprar(Usuario usuario);
 
     /**
      * Agrega un nuevo mueble al carro de compras
-     *
      * @param mueble Mueble que se agrega al carrito
      */
     public void agregarItem(Mueble mueble);
 
     /**
-     * Agrega un nuevo mueble al carro de compras
-     *
-     * @param id
-     * @return
-     */
-    public Mueble buscarItem(int id);
-
-    /**
      * Remueve un mueble del carrito de compra
-     *
      * @param mueble Mueble a remover
      * @param removerCero Indica si al ser cero se elimina de la lista
      */
