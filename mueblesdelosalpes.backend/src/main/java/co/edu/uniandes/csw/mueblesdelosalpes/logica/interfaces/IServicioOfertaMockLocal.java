@@ -8,6 +8,7 @@ import javax.ejb.Local;
  *
  * @author Juan Pablo
  */
+@Local
 public interface IServicioOfertaMockLocal {
 
     /**

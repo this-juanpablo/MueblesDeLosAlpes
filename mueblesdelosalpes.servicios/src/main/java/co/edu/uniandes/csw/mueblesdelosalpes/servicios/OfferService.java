@@ -17,6 +17,7 @@ import javax.ws.rs.core.MediaType;
  * @author Juan Pablo
  */
 @Path("/Oferta")
+@Stateless
 @Consumes(MediaType.APPLICATION_JSON)
 @Produces(MediaType.APPLICATION_JSON)
 public class OfferService {
@@ -27,7 +28,7 @@ public class OfferService {
      */
     @EJB
     private IServicioOfertaMockLocal offerEjb;
-
+    
     @GET
     @Path("ofertas/")
     public List<Offer> getOffers() {

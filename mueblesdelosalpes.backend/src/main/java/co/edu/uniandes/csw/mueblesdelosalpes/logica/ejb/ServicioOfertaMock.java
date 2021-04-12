@@ -4,11 +4,13 @@ import co.edu.uniandes.csw.mueblesdelosalpes.dto.Offer;
 import co.edu.uniandes.csw.mueblesdelosalpes.logica.interfaces.IServicioOfertaMockLocal;
 import co.edu.uniandes.csw.mueblesdelosalpes.logica.interfaces.IServicioOfertaMockRemote;
 import java.util.ArrayList;
+import javax.ejb.Stateless;
 
 /**
  *
  * @author Juan Pablo
  */
+@Stateless
 public class ServicioOfertaMock implements IServicioOfertaMockLocal, IServicioOfertaMockRemote {
 
     private ArrayList<Offer> offers = new ArrayList<Offer>();
